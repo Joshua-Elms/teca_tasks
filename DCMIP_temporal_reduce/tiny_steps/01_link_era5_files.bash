@@ -14,7 +14,7 @@ VARIABLEESFC="128_165_10u 128_166_10v 228_246_100u 228_247_100v 128_134_sp 128_1
 # getting error from "too many arguments" when linking all years at once, so 
 # we will do it month-by-month
 YEARS="2019"
-MONTHS="12 01 02"
+MONTHS="12"
 
 
 # error-out on any failure
