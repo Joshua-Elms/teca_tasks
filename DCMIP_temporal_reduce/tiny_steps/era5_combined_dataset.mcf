@@ -1,0 +1,73 @@
+data_root = /global/homes/j/joshelms/projects/teca_tasks/DCMIP_temporal_reduce/tiny_steps/era5_links
+regex = \.ll025.*\.nc
+
+x_axis_variable = longitude
+y_axis_variable = latitude
+z_axis_variable = level
+clamp_dimensions_of_one = 1
+
+[cf_reader]
+variables = U
+regex = %data_root%/.*128_131_u%regex%
+provides_time
+provides_geometry
+
+[cf_reader]
+variables = V
+regex = %data_root%/.*128_132_v%regex%
+
+[cf_reader]
+variables = T
+regex = %data_root%/.*128_130_t%regex%
+
+[cf_reader]
+variables = Z
+regex = %data_root%/.*128_129_z%regex%
+
+[cf_reader]
+variables = Q
+regex = %data_root%/.*128_133_q%regex%
+
+[cf_reader]
+variables = R
+regex = %data_root%/.*128_157_r%regex%
+
+[cf_reader]
+variables = VAR_10U
+regex = %data_root%/.*128_165_10u%regex%
+z_axis_variable = ""
+
+[cf_reader]
+variables = VAR_10V
+regex = %data_root%/.*128_166_10v%regex%
+z_axis_variable = ""
+
+[cf_reader]
+variables = VAR_100U
+regex = %data_root%/.*228_246_100u%regex%
+z_axis_variable = ""
+
+[cf_reader]
+variables = VAR_100V
+regex = %data_root%/.*228_247_100v%regex%
+z_axis_variable = ""
+
+[cf_reader]
+variables = SP
+regex = %data_root%/.*128_134_sp%regex%
+z_axis_variable = ""
+
+[cf_reader]
+variables = MSL
+regex = %data_root%/.*128_151_msl%regex%
+z_axis_variable = ""
+
+[cf_reader]
+variables = TCW
+regex = %data_root%/.*128_136_tcw%regex%
+z_axis_variable = ""
+
+[cf_reader]
+variables = VAR_2T
+regex = %data_root%/.*128_167_2t%regex%
+z_axis_variable = ""
